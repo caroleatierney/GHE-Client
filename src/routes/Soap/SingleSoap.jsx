@@ -27,9 +27,17 @@ function SingleSoap() {
   }, []);
 
  return (
-    <div>
-        <pre>{JSON.stringify(data, null, 2)}</pre> 
-    </div>
+   <div>
+     {/* <pre>{JSON.stringify(data, null, 2)}</pre>  */}
+
+     <Link to={"/soaps"}>🔙 Soap</Link>
+
+     <div className="soapdetails">
+       <div className="col-1">1</div>
+
+       <div className="col-2">2</div>
+     </div>
+   </div>
  );
 };
 

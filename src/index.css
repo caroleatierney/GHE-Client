@@ -112,8 +112,8 @@ footer {
   gap: 0.6rem;
 }
 
-/* Books */
-ul.books {
+/* Soaps */
+ul.soaps {
   display: flex;
   list-style: none;
   padding: 0;
@@ -122,17 +122,17 @@ ul.books {
   gap: 10px;
 }
 
-ul.books li {
+ul.soap li {
   flex: 1 0 21%;
 }
 
-ul.books li a {
+ul.soap li a {
   align-items: center;
   display: flex;
   flex-direction: column;
 }
 
-ul.books img {
+ul.soap img {
   max-height: 200px;
   border-radius: 5px;
 }
@@ -142,7 +142,7 @@ ul.books h3 {
   font-weight: 300;
 }
 
-.bookdetails {
+.soapdetails {
   display: flex;
   gap: 20px;
 }
