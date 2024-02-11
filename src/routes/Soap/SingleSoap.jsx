@@ -40,21 +40,17 @@ function SingleSoap() {
 
        <div className="col-2">
          <h2>Ingredients</h2>
-         <h4>{data.ingredients.ingredient1}</h4>
-         <h4>{data.ingredients.ingredient2}</h4>
+         {/* <h4>{data.ingredients.ingredient1}</h4> */}
+         {/* <h4>{data.ingredients.ingredient2}</h4>
          <h4>{data.ingredients.ingredient3}</h4>
          <h4>{data.ingredients.ingredient4}</h4>
          <h4>{data.ingredients.ingredient5}</h4>
          <h4>{data.ingredients.ingredient6}</h4>
          <h4>{data.ingredients.ingredient7}</h4>
-         <h4>{data.ingredients.ingredient8}</h4>
+         <h4>{data.ingredients.ingredient8}</h4> */}
        </div>
 
-       {/* <div className="col-2"> */}
-         {/* <h2>Lye Calculation</h2> */}
-         {/* <h4>{data.lyeCalculation.minimumWaterNeeded}</h4> */}
-         {/* <h4>{data.lyeCalculation.sodiumHydrocide}</h4> */}
-       {/* </div> */}
+
      </div>
    </div>
  );
