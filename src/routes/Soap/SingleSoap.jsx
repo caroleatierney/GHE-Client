@@ -9,7 +9,7 @@ function SingleSoap() {
    useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(`${baseUrl}${urlSlug.slug}`);
+        const response = await fetch(`${baseUrl}/${urlSlug.slug}`);
         // console.log("Response", response)
 
         if (!response.ok) {
@@ -28,14 +28,33 @@ function SingleSoap() {
 
  return (
    <div>
-     {/* <pre>{JSON.stringify(data, null, 2)}</pre>  */}
+     {/* <pre>{JSON.stringify(data, null, 2)}</pre> */}
 
      <Link to={"/soaps"}>🔙 Soap</Link>
 
      <div className="soapdetails">
-       <div className="col-1">1</div>
+       <div className="col-1">
+         <h1>{data.name}</h1>
+         <img src={data.image} alt={data.title} />
+       </div>
 
-       <div className="col-2">2</div>
+       <div className="col-2">
+         <h2>Ingredients</h2>
+         <h4>{data.ingredients.ingredient1}</h4>
+         <h4>{data.ingredients.ingredient2}</h4>
+         <h4>{data.ingredients.ingredient3}</h4>
+         <h4>{data.ingredients.ingredient4}</h4>
+         <h4>{data.ingredients.ingredient5}</h4>
+         <h4>{data.ingredients.ingredient6}</h4>
+         <h4>{data.ingredients.ingredient7}</h4>
+         <h4>{data.ingredients.ingredient8}</h4>
+       </div>
+
+       {/* <div className="col-2"> */}
+         {/* <h2>Lye Calculation</h2> */}
+         {/* <h4>{data.lyeCalculation.minimumWaterNeeded}</h4> */}
+         {/* <h4>{data.lyeCalculation.sodiumHydrocide}</h4> */}
+       {/* </div> */}
      </div>
    </div>
  );
