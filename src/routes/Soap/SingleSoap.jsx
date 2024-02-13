@@ -2,15 +2,17 @@ import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 
 function SingleSoap() {
-  const baseUrl = `${import.meta.env.VITE_SERVER_URL}/api/soaps`;
   const [data, setData] = useState([]);
   const urlSlug = useParams();
+  const baseUrl = `${import.meta.env.VITE_SERVER_URL}/api/soaps/${
+    urlSlug.slug}`;
 
-   useEffect(() => {
+  useEffect(() => {
+    console.log("In use effect");
     const fetchData = async () => {
       try {
-        const response = await fetch(`${baseUrl}/${urlSlug.slug}`);
-        // console.log("Response", response)
+        const response = await fetch(baseUrl);
+        console.log("Response", response);
 
         if (!response.ok) {
           throw new Error("Failed to fetch data.");
@@ -18,42 +20,49 @@ function SingleSoap() {
 
         const jsonData = await response.json();
         setData(jsonData);
+        console.log("JSON Data", jsonData);
       } catch (error) {
-            console.log(error);
+        console.log(error);
       }
     };
-
     fetchData();
-  }, []);
+  });
 
- return (
-   <div>
-     {/* <pre>{JSON.stringify(data, null, 2)}</pre> */}
+  // }, []);
 
-     <Link to={"/soaps"}>🔙 Soap</Link>
+  return (
+    <div>
+      <pre>{JSON.stringify(data, null, 2)}</pre>
 
-     <div className="soapdetails">
-       <div className="col-1">
-         <h1>{data.name}</h1>
-         <img src={data.image} alt={data.title} />
-       </div>
+      <Link to={"/soaps"}>🔙 Soap</Link>
 
-       <div className="col-2">
-         <h2>Ingredients</h2>
-         {/* <h4>{data.ingredients.ingredient1}</h4> */}
-         {/* <h4>{data.ingredients.ingredient2}</h4>
-         <h4>{data.ingredients.ingredient3}</h4>
-         <h4>{data.ingredients.ingredient4}</h4>
-         <h4>{data.ingredients.ingredient5}</h4>
-         <h4>{data.ingredients.ingredient6}</h4>
-         <h4>{data.ingredients.ingredient7}</h4>
-         <h4>{data.ingredients.ingredient8}</h4> */}
-       </div>
+      <div className="soapDetails">
+        <div className="col-1">
+          <h1>{data?.name}</h1>
+          <img src={data?.image} alt={data?.title} />
+          <Link to={`/editSoap/${data.slug}`}>Edit Soap</Link>
+        </div>
 
+        <div className="col-2">
+          <h2>Ingredients</h2>
+          <p>{data?.ingredients.ingredient1}</p>
+          <p>{data?.ingredients.ingredient2}</p>
+          <p>{data?.ingredients.ingredient3}</p>
+          <p>{data?.ingredients.ingredient4}</p>
+          <p>{data?.ingredients.ingredient5}</p>
+          <p>{data?.ingredients.ingredient6}</p>
+          <p>{data?.ingredients.ingredient7}</p>
+          <p>{data?.ingredients.ingredient8}</p>
+        </div>
 
-     </div>
-   </div>
- );
-};
+        <div>
+          <h4>Super Fat: {data?.percentSuperFat} %</h4>
+          <h4>Add cost to gift wrap bar: ${data?.addCostToGiftWrapPerBar}</h4>
+          <h4>Lye calculation: {data?.lyeCalculation}</h4>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 export default SingleSoap;
