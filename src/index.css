@@ -136,15 +136,15 @@ ul.soap img {
   max-height: 200px;
   border-radius: 5px;
 }
-
 ul.books h3 {
   text-align: center;
   font-weight: 300;
 }
 
-.soapdetails {
+.soapDetails {
   display: flex;
   gap: 20px;
+  justify-content: space-evenly;
 }
 
 .col-1 {

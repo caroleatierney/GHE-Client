@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home       from "./routes/Home/home";
 import About      from "./routes/About/about";
 import Soap       from "./routes/Soap/soap";
-import SingleSoap from "./routes/Soap/singleSoap";
+import SingleSoap from "./routes/Soap/SingleSoap";
 import Header     from "./components/Header";
 import Footer     from "./components/Footer";
 import "./index.css";
