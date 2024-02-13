@@ -26,9 +26,7 @@ function SingleSoap() {
       }
     };
     fetchData();
-  });
-
-  // }, []);
+  }, []);
 
   return (
     <div>
