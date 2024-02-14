@@ -45,6 +45,8 @@ function Soap() {
           data below is pulled from a MongoDB database.
         </p>
 
+        <Link to="/createSoap">+ Add new soap recipe</Link>
+
         <h2>Fetch example</h2>
         {/* <pre>{JSON.stringify(data, null, 2)}</pre> this will display just the json data*/}
 
