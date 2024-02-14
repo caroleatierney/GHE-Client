@@ -15,7 +15,7 @@ function App() {
         <Route>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/soaps" element={<Soap />} />
+          <Route path="/soap/" element={<Soap />} />
           <Route path="/soap/:slug" element={<SingleSoap />} />
         </Route>
       </Routes>

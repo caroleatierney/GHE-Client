@@ -5,7 +5,7 @@ function SingleSoap() {
   const [data, setData] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const urlSlug = useParams();
-  const baseUrl = `${import.meta.env.VITE_SERVER_URL}/api/soaps/${urlSlug.slug}`;
+  const baseUrl = `${import.meta.env.VITE_SERVER_URL}/api/soap/${urlSlug.slug}`;
 
   useEffect(() => {
     console.log("In use effect");
