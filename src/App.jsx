@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home       from "./routes/Home/Home";
+// import Home       from "./routes/Home/Home";
 import About      from "./routes/About/About";
 import Soap       from "./routes/Soap/Soap";
 import SingleSoap from "./routes/Soap/SingleSoap";
@@ -13,7 +13,7 @@ function App() {
       <Header />
       <Routes>
         <Route>
-          <Route path="/" element={<Home />} />
+          {/* <Route path="/" element={<Home />} /> */}
           <Route path="/about" element={<About />} />
           <Route path="/soap/" element={<Soap />} />
           <Route path="/soap/:slug" element={<SingleSoap />} />

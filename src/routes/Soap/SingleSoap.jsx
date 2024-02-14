@@ -8,7 +8,6 @@ function SingleSoap() {
   const baseUrl = `${import.meta.env.VITE_SERVER_URL}/api/soap/${urlSlug.slug}`;
 
   useEffect(() => {
-    console.log("In use effect");
     const fetchData = async () => {
       try {
         const response = await fetch(baseUrl);
