@@ -68,7 +68,7 @@ function Soap() {
           <ul className="books">
             {data.map((soap) => (
               <li key={soap._id}>
-                <Link to={`/soap/${soap.slug}`}>
+                <Link to={`/Soap/${soap.slug}`}>
                   <img src={`${soap.image} alt={soap.name}`} />
                   <h3>{soap.name}</h3>
                 </Link>

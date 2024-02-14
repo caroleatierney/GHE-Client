@@ -41,7 +41,7 @@ function SingleSoap() {
         <h1>{data.name}</h1>
         <img src={data?.image} alt={data?.name} />
         <div className="soapDetails">
-          <Link to={"/soap"}>🔙 Soap</Link>
+          <Link to={"/Soap"}>🔙 Soap</Link>
           {/* <Link to={`/editSoap/${data?.slug}`}>Edit Soap</Link> */}
         </div>
       </div>

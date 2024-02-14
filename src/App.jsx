@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home       from "./routes/Home.jsx";
+import Home       from "./routes/Home/Home.jsx";
 import About      from "./routes/About/About.jsx";
 import Soap       from "./routes/Soap/Soap.jsx";
 import SingleSoap from "./routes/Soap/SingleSoap.jsx";
