@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function Soap() {
-  const baseUrl = `${import.meta.env.VITE_SERVER_URL}/api/soaps`;
+  const baseUrl = `${import.meta.env.VITE_SERVER_URL}/api/soap`;
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -68,7 +68,7 @@ function Soap() {
           <ul className="books">
             {data.map((soap) => (
               <li key={soap._id}>
-                <Link to={`/soaps/${soap.slug}`}>
+                <Link to={`/soap/${soap.slug}`}>
                   <img src={`${soap.image} alt={soap.name}`} />
                   <h3>{soap.name}</h3>
                 </Link>

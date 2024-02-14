@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Home       from "./routes/Home/Home";
-import About      from "./routes/About/About";
-import Soap       from "./routes/Soap/Soap";
-import SingleSoap from "./routes/Soap/SingleSoap";
+import Home       from "./routes/home/Home";
+import About      from "./routes/about/About";
+import Soap       from "./routes/soap/Soap";
+import SingleSoap from "./routes/soap/SingleSoap";
 import Header     from "./components/Header";
 import Footer     from "./components/Footer";
 import "./index.css";
@@ -15,8 +15,8 @@ function App() {
         <Route>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/soaps" element={<Soap />} />
-          <Route path="/soaps/:slug" element={<SingleSoap />} />
+          <Route path="/soap" element={<Soap />} />
+          <Route path="/soap/:slug" element={<SingleSoap />} />
         </Route>
       </Routes>
       <Footer />
