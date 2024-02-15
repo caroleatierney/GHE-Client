@@ -38,7 +38,10 @@ function SingleSoap() {
 
       <div className="col-1">
         <h1>{data.name}</h1>
-        <img src={data?.image} alt={data?.name} />
+        <img
+          src={`http://localhost:8000/uploads/${data?.image}`}
+          alt={data?.name}
+        />
         <div className="soapDetails">
           <Link to={"/Soap"}>🔙 Soap</Link>
           {/* <Link to={`/editSoap/${data?.slug}`}>Edit Soap</Link> */}

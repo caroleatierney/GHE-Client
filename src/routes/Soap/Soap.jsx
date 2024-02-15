@@ -50,35 +50,35 @@ function Soap() {
         <h2>Fetch example</h2>
         {/* <pre>{JSON.stringify(data, null, 2)}</pre> this will display just the json data*/}
 
-
-      <div>
-        <label>Categories</label>
-        <select onChange={(e) => setSelectedCategory(e.target.value)}>
-          <option value="">All</option>
-          <option value="fragrant">Fragrant</option>
-          <option value="exfoliating">Exfoliating</option>
-          <option value="nourishing">Nourishing</option>
-        </select>
-      </div>
+        <div>
+          <label>Categories</label>
+          <select onChange={(e) => setSelectedCategory(e.target.value)}>
+            <option value="">All</option>
+            <option value="fragrant">Fragrant</option>
+            <option value="exfoliating">Exfoliating</option>
+            <option value="nourishing">Nourishing</option>
+          </select>
+        </div>
 
         {isLoading ? (
           <p>Loading...</p>
         ) : error ? (
           <p>{error}</p>
         ) : (
-
           <ul className="books">
             {data.map((soap) => (
               <li key={soap._id}>
                 <Link to={`/soap/${soap.slug}`}>
-                  <img src={`${soap.image} alt={soap.name}`} />
+                  <img
+                    src={`http://localhost:8000/uploads/${soap.image}`}
+                    alt={soap.name}
+                  />
                   <h3>{soap.name}</h3>
                 </Link>
               </li>
             ))}
           </ul>
         )}
-
       </div>
     );
   };
