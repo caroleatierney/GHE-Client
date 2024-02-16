@@ -155,6 +155,9 @@ ul.books h3 {
   flex-basis: 60%
 }
 
+.col-3 {
+  flex-basis: 50%
+}
 .filters {
   max-width: 200px;
   margin-bottom: 20px;

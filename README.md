@@ -12,3 +12,7 @@ Once you have full crud:
 - Get it to run on render
 - Use tailwind to style it
 - Add it back to portfolio with updated notes'- Go back through tutorial and update notes!!!
+
+
+
+    
